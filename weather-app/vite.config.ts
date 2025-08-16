@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/weather/weather-app/',
+  base: process.env.NODE_ENV === 'production' ? '/weather/weather-app/' : '/',
   plugins: [
     vue(),
     vueDevTools(),
